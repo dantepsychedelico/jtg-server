@@ -3,8 +3,9 @@
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
+let db_ip = process.env.DB_PORT_27017_TCP_ADDR || 'zacchung.ddns.net'
 // Connection URL
-const url = 'mongodb://zacchung.ddns.net:27017';
+const url = `mongodb://${db_ip}:27017`;
 
 // Database Name
 const dbName = 'db_cyclone';
