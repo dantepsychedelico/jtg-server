@@ -42,7 +42,7 @@ router.get('/report', function(req, res, next) {
         return {
           img: d.img,
           lat: d.pos.coords.latitude,
-          lot: d.pos.coords.longitude,
+          lon: d.pos.coords.longitude,
           desc: d.desc,
           create_ts: d.create_ts
         };
