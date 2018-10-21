@@ -50,4 +50,14 @@ router.get('/report', function(req, res, next) {
     });
 });
 
+router.get('/shelter', function(req, res, next) {
+  let db = getDb();
+  let ri = db.collection('shelter_info');
+  ri.find({'鄉鎮市區': '大安區'})
+    .toArray((err, docs) => {
+      if (err) console.log(err);
+      res.json(_.map(docs));
+    });
+});
+
 module.exports = router;
